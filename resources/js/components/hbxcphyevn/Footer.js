@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 class Footer extends Component {
     render() {
         return (
+            <div className="app-wrapper-footer">
                 <div className="app-footer">
                     <div className="app-footer__inner">
                         <div className="app-footer-left">
@@ -38,6 +39,7 @@ class Footer extends Component {
                         </div>
                     </div>
                 </div>
+            </div>
         );
     }
 }

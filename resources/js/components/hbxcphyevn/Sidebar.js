@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from "react-router-dom";
 
 class Sidebar extends Component {
 
@@ -18,7 +19,7 @@ class Sidebar extends Component {
 
     render() {
         return (
-            <div>
+            <div className="app-sidebar sidebar-shadow bg-sunny-morning sidebar-text-dark">
                 <div className="app-header__logo">
                     <div className="logo-src"></div>
                     <div className="header__pane ml-auto">
@@ -54,33 +55,33 @@ class Sidebar extends Component {
                         <ul className="vertical-nav-menu">
                             <li className="app-sidebar__heading">Dashboards</li>
                             <li>
-                                <a href="/" className="info {this.state.activeIndex==0 ? 'mm-active': null}" onClick={this.toggleClass.bind(this, 0)}>
+                                <Link to={`/`} className="info {this.state.activeIndex==0 ? 'mm-active': null}" onClick={this.toggleClass.bind(this, 0)}>
                                     <i className="metismenu-icon pe-7s-info"></i>
-                                    Info Virtual Account
-                                </a>
+                                    Menu 1
+                                </Link>
                             </li>
                             <li>
-                                <a href="/addvarsuntan" className="addva {this.state.activeIndex==0 ? 'mm-active': null}"  onClick={this.toggleClass.bind(this, 1)}>
+                                <Link to={`/menu2`} className="addva {this.state.activeIndex==0 ? 'mm-active': null}"  onClick={this.toggleClass.bind(this, 1)}>
                                     <i className="metismenu-icon pe-7s-add-user"></i>
-                                    Tambah Virtual Account
-                                </a>
+                                    Menu 2
+                                </Link>
                             </li>
                             <li>
                                 <a href="/history" className="history {this.state.activeIndex==0 ? 'mm-active': null}"  onClick={this.toggleClass.bind(this, 1)}>
                                     <i className="metismenu-icon pe-7s-note2"></i>
-                                    Riwayat Data
+                                    Menu 3
                                 </a>
                             </li>
                             <li>
                                 <a href="/account" className="gantipass {this.state.activeIndex==0 ? 'mm-active': null}"  onClick={this.toggleClass.bind(this, 2)}>
                                     <i className="metismenu-icon pe-7s-config"></i>
-                                    Pengaturan Akun
+                                    Menu 4
                                 </a>
                             </li>
                             <li>
                                 <a href="#" data-toggle="modal" data-target=".bd-example-modal-lg"  className="petunjuk {this.state.activeIndex==0 ? 'mm-active': null}"  onClick={this.toggleClass.bind(this, 2)}>
                                     <i className="metismenu-icon pe-7s-light"></i>
-                                    Petunjuk
+                                    Menu 5
                                 </a>
                             </li>
                             <li>
